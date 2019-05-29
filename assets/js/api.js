@@ -14,7 +14,11 @@ let chests = {
         };
         $.ajax(settings).done(function (response) {
             success(response);
-        })
+        }).fail(function (response) {
+            if(error) {
+                error(response)
+            }
+        });
 
     },
 
@@ -34,7 +38,11 @@ let chests = {
         };
         $.ajax(settings).done(function (response) {
             success(response);
-        })
+        }).fail(function (response) {
+            if(error) {
+                error(response)
+            }
+        });
     },
 
     remove(id, success, error) {
@@ -51,6 +59,10 @@ let chests = {
         };
         $.ajax(settings).done(function (response) {
             success(response);
+        }).fail(function (response) {
+            if(error) {
+                error(response)
+            }
         });
     },
 
@@ -70,6 +82,10 @@ let chests = {
         };
         $.ajax(settings).done(function (response) {
             success(response);
+        }).fail(function (response) {
+            if(error) {
+                error(response)
+            }
         });
     }
 

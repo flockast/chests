@@ -23,6 +23,21 @@
     background-color: green;
 }
 
+.table tr.error {
+    position: relative;
+    transform: scale(1);
+}
+
+.table tr.error:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 0, 0, 0.42);
+}
+
 .table th {
     padding-left: 20px;
 }
@@ -35,6 +50,7 @@
     border: none;
     color: transparent;
     text-shadow: 0 0 0 white;
+    cursor: default;
 }
 
 .table input[readonly]:focus {

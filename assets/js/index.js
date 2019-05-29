@@ -26,6 +26,10 @@ $(function() {
             $("body").removeClass("loading loading--lg");
             tableInit();
         }
+    }, function(response) {
+        $("body").removeClass("loading loading--lg");
+        $(".alert-wrap").addClass("is-active");
+        console.log(response);
     })
 
 });

@@ -35,6 +35,11 @@ function tableInit() {
             $tr.find('.' + btnCheckClass)
                 .removeClass("show")
                 .siblings('.' + btnEditClass).removeClass("hide");
+        }, function(response) {
+            $tr
+                .removeClass("choose loading loading--sm")
+                .addClass("error");
+            console.log(response);
         });
     }
 
@@ -47,6 +52,11 @@ function tableInit() {
             setTimeout(function() {
                 $tr.fadeOut();
             }, 400);
+        }, function(response) {
+            $tr
+                .removeClass("choose loading loading--sm")
+                .addClass("error");
+            console.log(response);
         });
     }
 

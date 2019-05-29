@@ -3,5 +3,6 @@
 @import "blocks/table.css";
 @import "blocks/options.css";
 @import "blocks/modal.css";
+@import "blocks/alert.css";
 
 @import "components/loading.css";
