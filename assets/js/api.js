@@ -19,7 +19,6 @@ let chests = {
     },
 
     update(id, data, success, error) {
-        console.log(data);
         var settings = {
             "async": true,
             "crossDomain": true,
@@ -56,7 +55,6 @@ let chests = {
     },
 
     add(data, success, error) {
-        var jsondata = {"field1": "xyz","field2": "abc"};
         var settings = {
             "async": true,
             "crossDomain": true,

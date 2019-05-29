@@ -1,8 +1,8 @@
 $(function() {
 
+    $("body").addClass("loading loading--lg");
     chests.getAll(function (response) {
         if(response) {
-            console.log(response);
             response.forEach((item, index) => {
                 $(".js-table tbody").append(`
                     <tr data-id="${item._id}">
@@ -22,7 +22,8 @@ $(function() {
                         </td>
                     </tr>
                 `);
-            })
+            });
+            $("body").removeClass("loading loading--lg");
             tableInit();
         }
     })

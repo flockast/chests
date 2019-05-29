@@ -12,8 +12,11 @@ $(function() {
              description: $form.find("textarea[name=description]").val(),
         };
 
+        $(".js-modal").addClass("loading");
+
         chests.add(data, function(response) {
             if(response) {
+                $(".js-modal").removeClass("loading");
                 $(".js-table tbody").append(`
                         <tr data-id="${response._id}" class="new">
                             <td>${$(".js-table tbody tr").length + 1}</td>
@@ -37,6 +40,7 @@ $(function() {
                 setTimeout(function () {
                     $(".js-table tr.new").removeClass("new");
                 }, 1000)
+                tableInit();
             }
         });
 

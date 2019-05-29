@@ -17,7 +17,7 @@ function tableInit() {
     }
 
     function acceptTrInTable($tr) {
-        $tr.addClass("loading");
+        $tr.addClass("loading loading--sm");
         let data = {
             title: $tr.find('input[name=title]').val(),
             icon: $tr.find('input[name=icon]').val(),
@@ -28,8 +28,7 @@ function tableInit() {
         };
         chests.update($tr.attr("data-id"), data, function(response) {
             $tr
-                .removeClass("choose")
-                .removeClass("loading")
+                .removeClass("choose loading loading--sm")
                 .find("input")
                 .attr("readonly", true)
                 .removeClass("editable");
@@ -40,8 +39,11 @@ function tableInit() {
     }
 
     function removeTrFromTable($tr) {
+        $tr.addClass("loading loading--sm");
         chests.remove($tr.attr("data-id"), function() {
-            $tr.addClass("choose removed");
+            $tr
+                .removeClass("loading loading--sm")
+                .addClass("choose removed");
             setTimeout(function() {
                 $tr.fadeOut();
             }, 400);
