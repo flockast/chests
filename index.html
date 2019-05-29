@@ -45,23 +45,23 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="">
+                <form>
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="inputTitle">Title</label>
-                            <input type="text" class="form-control" id="inputTitle" aria-describedby="emailHelp" placeholder="Enter title">
+                            <input type="text" class="form-control" id="inputTitle" placeholder="Enter title" name="title">
                         </div>
                         <div class="form-group">
                             <label for="inputIcon">Icon</label>
-                            <input type="text" class="form-control" id="inputIcon" placeholder="Enter Icon">
+                            <input type="text" class="form-control" id="inputIcon" placeholder="Enter Icon" name="icon">
                         </div>
                         <div class="form-group">
                             <label for="inputCost">Cost</label>
-                            <input type="text" class="form-control" id="inputCost" placeholder="Enter Cost">
+                            <input type="number" step="any" class="form-control" id="inputCost" placeholder="Enter Cost" name="cost">
                         </div>
                         <div class="form-group">
                             <label for="selectCount">Count</label>
-                            <select class="form-control" id="selectCount">
+                            <select class="form-control" id="selectCount" name="count">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -70,14 +70,18 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <label for="inputVersion">Version</label>
+                            <input type="number" class="form-control" id="inputVersion" placeholder="Enter Version" name="version">
+                        </div>
+                        <div class="form-group">
                             <label for="textareaDescription">Description</label>
-                            <textarea class="form-control" id="textareaDescription" rows="3"></textarea>
+                            <textarea class="form-control" id="textareaDescription" rows="3" name="description"></textarea>
                         </div>
 
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" type="submit">Add</button>
+                        <button type="submit" class="btn btn-primary">Add</button>
                     </div>
                 </form>
             </div>
@@ -88,6 +92,7 @@
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" defer></script>
     <script src="./assets/js/api.js" defer></script>
     <script src="./assets/js/table.js" defer></script>
+    <script src="./assets/js/modal.js" defer></script>
     <script src="./assets/js/index.js" defer></script>
 </body>
 </html>

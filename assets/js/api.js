@@ -39,13 +39,40 @@ let chests = {
     },
 
     remove(id, success, error) {
-
-        success();
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://test12345-daf7.restdb.io/rest/chests/" + id,
+            "method": "DELETE",
+            "headers": {
+                "content-type": "application/json",
+                "x-apikey": "5ce414a1780a473c8df5ca56",
+                "cache-control": "no-cache"
+            }
+        };
+        $.ajax(settings).done(function (response) {
+            success(response);
+        });
     },
 
     add(data, success, error) {
-
-        success();
+        var jsondata = {"field1": "xyz","field2": "abc"};
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://test12345-daf7.restdb.io/rest/chests",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json",
+                "x-apikey": "5ce414a1780a473c8df5ca56",
+                "cache-control": "no-cache"
+            },
+            "processData": false,
+            "data": JSON.stringify(data)
+        };
+        $.ajax(settings).done(function (response) {
+            success(response);
+        });
     }
 
 };

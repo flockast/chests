@@ -40,7 +40,7 @@ function tableInit() {
     }
 
     function removeTrFromTable($tr) {
-        chests.remove($tr.attr("id"), function() {
+        chests.remove($tr.attr("data-id"), function() {
             $tr.addClass("choose removed");
             setTimeout(function() {
                 $tr.fadeOut();

@@ -18,6 +18,10 @@
     background-color: #2d2d2d;
 }
 
+.table tr.new td {
+    background-color: green;
+}
+
 .table th {
     padding-left: 20px;
 }
