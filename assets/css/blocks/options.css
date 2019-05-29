@@ -1,0 +1,35 @@
+.options {
+    position: relative;
+    width: 120px;
+    height: 45px;
+    overflow: hidden;
+}
+.options__item {
+    position: absolute;
+    top: 3px;
+    transition: .2s ease-in-out;
+}
+
+.options__item--edit {
+    position: absolute;
+    left: 3px;
+}
+
+.options__item--edit.hide {
+    transform: translateY(130%);
+}
+
+.options__item--check {
+    position: absolute;
+    left: 2px;
+    transform: translateY(130%);
+}
+
+.options__item--check.show {
+    transform: translateY(0);
+}
+
+.options__item--remove {
+    position: absolute;
+    left: 60px;
+}

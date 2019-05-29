@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <title>G!</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-dark justify-content-between mb-5">
+        <a class="navbar-brand">Chests</a>
+        <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal" type="add"><span class="oi oi-plus"></span> Add new chet</button>
+    </nav>
+    <div class="container-fluid">
+        <table class="table js-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>title</th>
+                    <th>icon</th>
+                    <th>cost</th>
+                    <th>count</th>
+                    <th>version</th>
+                    <th>description</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Adding a new chest</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="inputTitle">Title</label>
+                            <input type="text" class="form-control" id="inputTitle" aria-describedby="emailHelp" placeholder="Enter title">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputIcon">Icon</label>
+                            <input type="text" class="form-control" id="inputIcon" placeholder="Enter Icon">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputCost">Cost</label>
+                            <input type="text" class="form-control" id="inputCost" placeholder="Enter Cost">
+                        </div>
+                        <div class="form-group">
+                            <label for="selectCount">Count</label>
+                            <select class="form-control" id="selectCount">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="textareaDescription">Description</label>
+                            <textarea class="form-control" id="textareaDescription" rows="3"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" type="submit">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js" defer></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" defer></script>
+    <script src="./assets/js/api.js" defer></script>
+    <script src="./assets/js/table.js" defer></script>
+    <script src="./assets/js/index.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+.table {
+    color: white;
+}
+
+.table tr {
+    transition: transform .8s ease-in-out;
+}
+
+.table tr.removed {
+    transform: translateX(-100%);
+}
+
+.table tr:hover td {
+    background-color: #2d2d2d;
+}
+
+.table tr.choose td {
+    background-color: #2d2d2d;
+}
+
+.table th {
+    padding-left: 20px;
+}
+.table td {
+    vertical-align: middle;
+}
+
+.table input[readonly] {
+    background: none;
+    border: none;
+    color: transparent;
+    text-shadow: 0 0 0 white;
+}
+
+.table input[readonly]:focus {
+    outline: none;
+}
+
+.table input[readonly]:focus {
+    outline: none;
+}
+
+.table input {
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 4px;
+    box-shadow: none;
+    border: none;
+    -webkit-appearance: none;
+}
