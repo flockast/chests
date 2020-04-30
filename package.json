@@ -2,7 +2,7 @@
   "author": "k. vlasov <flockast@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "open-iconic": "^1.1.1"
   }
 }
